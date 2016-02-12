@@ -1,31 +1,70 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
 		<title> Guessing Game</title>
 	</head>
 	
 	<body>
-		<h1>GUESS THE NUMBER GAME!<h1>
-		<p>A Game where you guess the number!</p>
+		<h1 class="mainText">GUESS THE NUMBERS GAME!</h1>
+		
+		<p class="subtext">You have 5 chances to guess to the Winning Number!</p>
+		<!-- GAME PORTION OF CODE-->
+		<div class="game"> 
+			<div class="activeGame">
+				Guess: <input type="text" name="fname" id="guess"><br>
+				</input>
+				<!-- SUBMIT GUESS BUTTON -->
+				<button type="button" onclick="playersGuessSubmission()" id="guess" class="submitButton"> Submit your guess! </button>
+				
+				<!-- ENTER KEY -->
+				<script>
+					var button = document.querySelector("#guess");
+					button.addEventListener('keydown', function(event){
+						if (event.keyCode == 13)
+							playersGuessSubmission();
+					});
+				</script>
+			</div>
+		</div>
+		<!-- PLAY AGAIN BUTTON-->
+		<div> 
+			<button type="button" class="playAgain" onclick="playAgain()">Play Again</button>
+		</div>
+		
+		<!-- HINT BUTTON -->
+		<div>
+			<button type="button" class="hint">HINT?</button>
 
-		<div> 
-			Guess: <input type="text" name="fname"><br>
-			<button type="button">Submit your guess!</button>
-			<!--| <input type="submit" value="Submit"> |-->
-		</div>
-		<div> 
-			<button type="button">Play Again</button>
-		</div>
-		<div> 
-			<button type="button">Start Over</button>
+			<!-- MOUSEDOWN/UP -->
+			<script>
+				var button = document.querySelector(".hint");
+				button.addEventListener("mousedown", function(event){
+					if (event.which == 1)
+						provideHint();
+					
+				});
+				button.addEventListener("mouseup", function(event){
+					if (event.which == 1)
+						$('.provideHint').remove();
+					
+				});
+			</script>
 		</div>
 
- 		<input type="submit" value="Submit">
-</form>
+	<script src="jquery.min.js"></script>
+	<script src="javascript.js"></script>
+		<!-- javascript.js must be after jquery.min.js 
+			 Both should appear at the bottom of <body></body> tag-->
 	</body>
+
 </html>
+
+
+<!-- <button type="button" id="playersGuess" onclick="playAgain()" class="btn btn-lg btn-default">Play Again</button> -->
 
 <!--
 2-4 Buttons

@@ -1,10 +1,110 @@
-div {
+body {
+    text-align: center;
+    background-color: #334431;
+}
+
+.mainText {
+    font-family: "Arial", Verdana, serif;
+    background-color: ##e05038;
     height: 50px;
-    width: 120px;
-    border-color:#6495ED;
-    background-color:#BCD2EE;
-    border-radius: 10px;
+    width: 500px;
     margin: auto;
+    padding: 10px;
+    color: #e6af4b;
+}
+
+div {
+    margin: auto;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
+    color: red;
+}
+
+.activeGame {
+    color: #e6af4b;
+    font-family: "Arial", Verdana, serif;
+    font-size: 28px;
+    padding: 20px;  
+    margin: auto;
+}
+
+p {
+	color: #e6af4b;
+    text-align: center;
+    border: 10px;
+    margin: 25px;
+    font-size: 25px;
+    border: 20px;
+
+    
+}
+
+.feedbackString {
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    margin: 20px;
+    background-color: #f2cbbc;
+    border: 2px;
+    border-radius: 10px;
+}
+
+.feedbackStringWinner {
+    color: black;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    margin: 20px;
+    background-color: #00FF00;
+    border: 2px;
+    border-radius: 10px;
+}
+
+.game {
+
+	color: red;
+    border: 25px;
+    background-color:#e05038;
+    border-radius: 10px;
+}
+
+.submitButton {
+    background-color: #f2cbbc;
+    color: #e05038;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    outline: 0;
+    border: 0;
+    font-family: "Arial", Verdana, serif;
+    font-size: 16px;
+}
+
+.playAgain {
+    background-color: #f2cbbc;
+    color: #e05038;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    outline: 0;
+    border: 0;
+    font-family: "Arial", Verdana, serif;
+    font-size: 16px;
+}
+
+.hint {
+     background-color: #f2cbbc;
+    color: #e05038;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    outline: 0;
+    border: 0;
+    font-family: "Arial", Verdana, serif;
+    font-size: 16px;
+}
+
+.subtext {
+    text-align: center;
 }
